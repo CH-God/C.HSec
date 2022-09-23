@@ -6,7 +6,6 @@ Kensei#5666
 
 https://discord.gg/WRUMAKDxXY
 ]]
-
 local Players = game:GetService("Players")
 local Lp = Players.LocalPlayer
 local Char = Lp.Character
@@ -25,7 +24,7 @@ function shoot1()
         [1] = KenseiIsDaddy[fruit].RemoteEvent.RemoteFunction:InvokeServer(),
         [2] = fruit .. "Power" .. _G.Power,
         [3] = "StartCharging",
-        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [4] = CFrame.new(_G.mousepos),
         [5] = workspace.IslandWindmill.Base.GrassWedge,
         [6] = "Right"
     }
@@ -35,7 +34,7 @@ function shoot1()
         [1] = KenseiIsDaddy[fruit].RemoteEvent.RemoteFunction:InvokeServer(),
         [2] = fruit .. "Power" .. _G.Power,
         [3] = "StopCharging",
-        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [4] = CFrame.new(_G.mousepos),
         [5] = workspace.IslandWindmill.Base.GrassWedge,
         [6] = _G.Charge
     }
@@ -47,7 +46,7 @@ function shoot2()
         [1] = KenseiIsDaddy[fruit2].RemoteEvent.RemoteFunction:InvokeServer(),
         [2] = fruit2 .. "Power" .. _G.Power2,
         [3] = "StartCharging",
-        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [4] = CFrame.new(_G.mousepos2),
         [5] = workspace.IslandWindmill.Base.GrassWedge,
         [6] = "Right"
     }
@@ -57,13 +56,14 @@ function shoot2()
         [1] = KenseiIsDaddy[fruit2].RemoteEvent.RemoteFunction:InvokeServer(),
         [2] = fruit2 .. "Power" .. _G.Power2,
         [3] = "StopCharging",
-        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [4] = CFrame.new(_G.mousepos2),
         [5] = workspace.IslandWindmill.Base.GrassWedge,
         [6] = _G.Charge2
     }
 
     game:GetService("Players").LocalPlayer.Character.Powers[fruit2].RemoteEvent:FireServer(unpack(args))
 end
+-- change _G.Mouse to another position to change location.
 --[[
 DO NOT SELL
 Credit me or else ur a femboy
@@ -72,4 +72,3 @@ Kensei#5666
 
 https://discord.gg/WRUMAKDxXY
 ]]
-
