@@ -1,3 +1,12 @@
+--[[
+DO NOT SELL
+Credit me or else ur a femboy
+
+Kensei#5666
+
+https://discord.gg/WRUMAKDxXY
+]]
+
 local Players = game:GetService("Players")
 local Lp = Players.LocalPlayer
 local Char = Lp.Character
@@ -55,3 +64,12 @@ function shoot2()
 
     game:GetService("Players").LocalPlayer.Character.Powers[fruit2].RemoteEvent:FireServer(unpack(args))
 end
+--[[
+DO NOT SELL
+Credit me or else ur a femboy
+
+Kensei#5666
+
+https://discord.gg/WRUMAKDxXY
+]]
+
