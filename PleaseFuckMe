@@ -1,0 +1,57 @@
+local Players = game:GetService("Players")
+local Lp = Players.LocalPlayer
+local Char = Lp.Character
+local name = tostring(game.Players.LocalPlayer.Name)
+local fruit = game:GetService("Workspace")["" .. name].DevilFruit.Value
+local fruit2 = game:GetService("Workspace")["" .. name].DevilFruit2.Value
+local FruitValue = nil
+local FruitValue2 = nil
+local FruitRemote = Char.Powers["" .. fruit].RemoteEvent
+local FruitRemote2 = Char.Powers["" .. fruit2].RemoteEvent
+local KenseiIsDaddy = game:GetService("Players").LocalPlayer.Character.Powers
+local sex = game.Players.LocalPlayer:GetMouse()
+_G.Mouse = sex.Hit.p
+function shoot1()
+    local args = {
+        [1] = KenseiIsDaddy[fruit].RemoteEvent.RemoteFunction:InvokeServer(),
+        [2] = fruit .. "Power" .. _G.Power,
+        [3] = "StartCharging",
+        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [5] = workspace.IslandWindmill.Base.GrassWedge,
+        [6] = "Right"
+    }
+
+    game:GetService("Players").LocalPlayer.Character.Powers[fruit].RemoteEvent:FireServer(unpack(args))
+    local args = {
+        [1] = KenseiIsDaddy[fruit].RemoteEvent.RemoteFunction:InvokeServer(),
+        [2] = fruit .. "Power" .. _G.Power,
+        [3] = "StopCharging",
+        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [5] = workspace.IslandWindmill.Base.GrassWedge,
+        [6] = _G.Charge
+    }
+
+    game:GetService("Players").LocalPlayer.Character.Powers[fruit].RemoteEvent:FireServer(unpack(args))
+end
+function shoot2()
+    local args = {
+        [1] = KenseiIsDaddy[fruit2].RemoteEvent.RemoteFunction:InvokeServer(),
+        [2] = fruit2 .. "Power" .. _G.Power2,
+        [3] = "StartCharging",
+        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [5] = workspace.IslandWindmill.Base.GrassWedge,
+        [6] = "Right"
+    }
+
+    game:GetService("Players").LocalPlayer.Character.Powers[fruit2].RemoteEvent:FireServer(unpack(args))
+    local args = {
+        [1] = KenseiIsDaddy[fruit2].RemoteEvent.RemoteFunction:InvokeServer(),
+        [2] = fruit2 .. "Power" .. _G.Power2,
+        [3] = "StopCharging",
+        [4] = CFrame.new((_G.mousepos2), (_G.mousepos2)),
+        [5] = workspace.IslandWindmill.Base.GrassWedge,
+        [6] = _G.Charge2
+    }
+
+    game:GetService("Players").LocalPlayer.Character.Powers[fruit2].RemoteEvent:FireServer(unpack(args))
+end
